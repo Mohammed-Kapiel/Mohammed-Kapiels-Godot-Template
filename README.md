@@ -1,4 +1,4 @@
-GodotTemplate
+## Godot Template
  
 This is a template made for Godot 4.2.1.
 It was adapted from my latest game, found here: [https://github.com/Mohammed-Kapiel/Vuno-The-Adventureers-Log]
