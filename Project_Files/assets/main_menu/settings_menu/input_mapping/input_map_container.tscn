@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxfcpld4homoj"]
+
+[ext_resource type="Script" path="res://assets/main_menu/settings_menu/input_mapping/input_mapping.gd" id="1_mcjc1"]
+
+[node name="Input Map Container" type="GridContainer"]
+columns = 2
+script = ExtResource("1_mcjc1")

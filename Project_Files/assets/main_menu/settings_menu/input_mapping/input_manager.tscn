@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qiy574xibxek"]
+
+[ext_resource type="Script" path="res://assets/main_menu/settings_menu/input_mapping/input_mapping.gd" id="1_stksi"]
+
+[node name="Input Manager" type="Node"]
+script = ExtResource("1_stksi")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://mdjx1qkxs8g7"]
+
+[ext_resource type="Script" path="res://assets/level_manager/level_toggle_utility.gd" id="1_thycy"]
+
+[node name="Level Toggle Utility" type="Node"]
+script = ExtResource("1_thycy")

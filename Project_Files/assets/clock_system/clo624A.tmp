@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://5ksovsxf6g6t"]
+
+[ext_resource type="Script" path="res://Managers/Clock Manager/Clock Manager.gd" id="1_2c43x"]
+[ext_resource type="PackedScene" uid="uid://bvjycbc8x7tyy" path="res://Managers/Clock Manager/clock_ui.tscn" id="2_ep6dk"]
+
+[node name="Clock Manager" type="Node"]
+script = ExtResource("1_2c43x")
+
+[node name="Clock Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Clock UI" parent="." instance=ExtResource("2_ep6dk")]
+
+[connection signal="timeout" from="Clock Timer" to="." method="_on_clock_timer_timeout"]

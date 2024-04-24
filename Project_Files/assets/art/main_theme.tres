@@ -1,0 +1,72 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://uhraltuj38dm"]
+
+[ext_resource type="FontFile" uid="uid://wcnotdxb1bov" path="res://assets/fonts/return-of-ganon/retganon.ttf" id="1_e1bph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxxon"]
+bg_color = Color(0.607843, 0.678431, 0.717647, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.411765, 0.415686, 0.415686, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_j6bnl"]
+color = Color(0.913725, 0.423529, 0, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 14
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qnmrl"]
+color = Color(1, 0.694118, 0.431373, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 14
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_rwjax"]
+color = Color(0.160784, 0.160784, 0.160784, 1)
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl233"]
+bg_color = Color(0.25098, 0.25098, 0.521569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y862r"]
+bg_color = Color(1, 0.694118, 0.431373, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xrgm"]
+bg_color = Color(0.607843, 0.678431, 0.717647, 0.631373)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 30.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0, 0, 0, 1)
+
+[resource]
+/colors/BakcGround = Color(0, 0, 0.180392, 1)
+/colors/BtnBack = Color(0, 0, 0, 1)
+/colors/Font = Color(0.607843, 0.678431, 0.717647, 1)
+Button/colors/font_color = Color(0, 0, 0.180392, 1)
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_e1bph")
+Button/styles/normal = SubResource("StyleBoxFlat_pxxon")
+HSlider/styles/grabber_area = SubResource("StyleBoxLine_j6bnl")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxLine_qnmrl")
+HSlider/styles/slider = SubResource("StyleBoxLine_rwjax")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_e1bph")
+Panel/styles/panel = SubResource("StyleBoxFlat_pl233")
+TooltipLabel/colors/font_color = Color(1, 1, 1, 1)
+TooltipLabel/fonts/font = ExtResource("1_e1bph")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_y862r")
+Window/colors/title_color = Color(0, 0, 0.180392, 1)
+Window/styles/embedded_border = SubResource("StyleBoxFlat_8xrgm")

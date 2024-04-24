@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1mbdi6je0hjr"]
+
+[ext_resource type="Script" path="res://assets/audio_player/audio_player.gd" id="1_sr7qo"]
+[ext_resource type="AudioStream" uid="uid://drdrgm77wudjn" path="res://assets/audio_player/music/the_field_of_dreams.mp3" id="1_vyyij"]
+[ext_resource type="AudioStream" uid="uid://onwvty8w3iqo" path="res://assets/audio_player/effects/mathewhenry__guitar-string-plucked-at-headstock.mp3" id="2_7aeki"]
+
+[node name="Audio Player" type="Node"]
+script = ExtResource("1_sr7qo")
+
+[node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("1_vyyij")
+autoplay = true
+bus = &"MUSIC"
+
+[node name="SFXStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_7aeki")
+bus = &"SFX"

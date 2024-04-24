@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://5ksovsxf6g6t"]
+
+[ext_resource type="Script" path="res://assets/clock_system/Clock Manager.gd" id="1_2c43x"]
+
+[node name="Clock Manager" type="Node"]
+script = ExtResource("1_2c43x")
+
+[node name="Clock Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="Clock Timer" to="." method="_on_clock_timer_timeout"]

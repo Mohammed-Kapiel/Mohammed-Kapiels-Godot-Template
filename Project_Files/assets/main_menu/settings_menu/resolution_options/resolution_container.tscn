@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://gn11cqrepdhc"]
+
+[ext_resource type="Script" path="res://assets/main_menu/settings_menu/resolution_options/reolution_settings_menu.gd" id="1_f6fsf"]
+
+[node name="Resolution Container" type="HBoxContainer"]
+script = ExtResource("1_f6fsf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "RESOLUTION"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[connection signal="item_selected" from="OptionButton" to="." method="_on_resolution_option_button_item_selected"]
