@@ -40,7 +40,7 @@ bg_color = Color(0.25098, 0.25098, 0.521569, 1)
 bg_color = Color(1, 0.694118, 0.431373, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8xrgm"]
-bg_color = Color(0.607843, 0.678431, 0.717647, 0.631373)
+bg_color = Color(0.815686, 0.619608, 0.45098, 0.631373)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4

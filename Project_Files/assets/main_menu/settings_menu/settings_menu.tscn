@@ -2,11 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://uhraltuj38dm" path="res://assets/art/main_theme.tres" id="1_ea48h"]
 [ext_resource type="Script" path="res://assets/main_menu/settings_menu/audio_settings_menu.gd" id="2_rqvgv"]
-[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/main_menu/button_custom/base_button.tscn" id="3_ldjsr"]
+[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/_common_ui/button_custom/base_button.tscn" id="3_ldjsr"]
 [ext_resource type="PackedScene" uid="uid://cynngi4n55d55" path="res://assets/level_manager/menu_toggle_utility.tscn" id="4_4f4cl"]
 [ext_resource type="PackedScene" uid="uid://b7ikyk5oj7wfl" path="res://assets/main_menu/settings_menu/language_options/language_options.tscn" id="5_inmvm"]
 [ext_resource type="PackedScene" uid="uid://dxfcpld4homoj" path="res://assets/main_menu/settings_menu/input_mapping/input_map_container.tscn" id="6_ifify"]
 [ext_resource type="PackedScene" uid="uid://gn11cqrepdhc" path="res://assets/main_menu/settings_menu/resolution_options/resolution_container.tscn" id="7_5mjpc"]
+
 
 [node name="Settings Menu" type="Control"]
 layout_mode = 3

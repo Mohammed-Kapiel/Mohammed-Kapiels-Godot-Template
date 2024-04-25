@@ -26,10 +26,10 @@ func get_play_time() -> int:
 func change_year_delay(duration):
 	if !clock_timer:
 		return
-	var time_left = clock_timer.time_left
-	if time_left < duration:
-		_on_clock_timer_timeout
-	
+	#var time_left = clock_timer.time_left
+	#if time_left < duration:
+		#_on_clock_timer_timeout()
+	#
 	clock_timer.stop()
 	clock_timer.set_wait_time(duration)
 	clock_timer.start()

@@ -1,56 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvjycbc8x7tyy"]
+[gd_scene load_steps=2 format=3 uid="uid://fymv0cl1jnx"]
 
 [ext_resource type="Script" path="res://assets/clock_system/clock_ui.gd" id="1_d7l37"]
-[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/main_menu/button_custom/base_button.tscn" id="2_pj1l4"]
-[ext_resource type="Texture2D" uid="uid://dulv2gfgrfins" path="res://assets/art/godot_icon.svg" id="3_1k121"]
-[ext_resource type="PackedScene" uid="uid://cynngi4n55d55" path="res://assets/level_manager/menu_toggle_utility.tscn" id="4_jlvi7"]
-[ext_resource type="PackedScene" uid="uid://oxhl8m0jpeyx" path="res://assets/pause_menu/pause_menu.tscn" id="5_tmc8n"]
 
-[node name="Top Bar UI" type="Control"]
-layout_mode = 3
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 50.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-mouse_filter = 1
+[node name="Clock UI" type="VBoxContainer"]
 script = ExtResource("1_d7l37")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 58.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.941176, 0.839216, 0.588235, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -210.0
-offset_bottom = 58.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/margin_top = 33
-theme_override_constants/margin_right = 14
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Current Year Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="Current Year Label" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-text = "Year"
+text = "YEAR"
 
-[node name="Year Delay Slider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+[node name="Year Delay Slider" type="HSlider" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -60,31 +22,4 @@ max_value = 10.0
 step = 0.05
 value = 10.0
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
-grow_horizontal = 0
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 14
-
-[node name="Button" parent="MarginContainer2" instance=ExtResource("2_pj1l4")]
-layout_mode = 2
-text = ""
-icon = ExtResource("3_1k121")
-icon_alignment = 1
-expand_icon = true
-
-[node name="Menu Toggle Utility" parent="MarginContainer2/Button" node_paths=PackedStringArray("menu_scene") instance=ExtResource("4_jlvi7")]
-menu_scene = NodePath("../../../Pause Menu")
-
-[node name="Pause Menu" parent="." instance=ExtResource("5_tmc8n")]
-visible = false
-layout_mode = 1
-offset_bottom = 1030.0
-
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Year Delay Slider" to="." method="_on_year_delay_slider_value_changed"]
-[connection signal="pressed" from="MarginContainer2/Button" to="MarginContainer2/Button/Menu Toggle Utility" method="_on_open_menu_requested"]
+[connection signal="value_changed" from="Year Delay Slider" to="." method="_on_year_delay_slider_value_changed"]

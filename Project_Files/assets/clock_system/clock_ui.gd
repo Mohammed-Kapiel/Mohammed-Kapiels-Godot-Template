@@ -1,6 +1,6 @@
 extends Control
 
-@onready var clock_manager = get_node("/root/ClockManager")
+@onready var clock_manager = ClockManager
 @onready var current_year_label = %"Current Year Label"
 #@onready var play_time_label = %"Play Time Label"
 @onready var year_delay_slider = %"Year Delay Slider"

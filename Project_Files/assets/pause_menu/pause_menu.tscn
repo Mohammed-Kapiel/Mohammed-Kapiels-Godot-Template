@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://oxhl8m0jpeyx"]
 
-[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/main_menu/button_custom/base_button.tscn" id="1_5i8aw"]
+[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/_common_ui/button_custom/base_button.tscn" id="1_5i8aw"]
 [ext_resource type="PackedScene" uid="uid://cynngi4n55d55" path="res://assets/level_manager/menu_toggle_utility.tscn" id="2_f75xe"]
 [ext_resource type="PackedScene" uid="uid://mdjx1qkxs8g7" path="res://assets/level_manager/level_toggle_utility.tscn" id="3_te53f"]
-[ext_resource type="Script" path="res://assets/main_menu/quit_game.gd" id="4_c2t3j"]
+[ext_resource type="Script" path="res://assets/_common_util/quit_game.gd" id="4_c2t3j"]
 [ext_resource type="Theme" uid="uid://uhraltuj38dm" path="res://assets/art/main_theme.tres" id="5_43el4"]
 [ext_resource type="Texture2D" uid="uid://ceycmnc4rcqgm" path="res://assets/art/MohammedKapiel_logos_white.png" id="6_62hjv"]
 
@@ -25,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-color = Color(0, 0, 0.180392, 0.92549)
+color = Color(0, 0, 0.180392, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
 layout_mode = 1
@@ -44,7 +44,6 @@ layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="Close Button" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("1_5i8aw")]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -57,7 +56,7 @@ menu_scene = NodePath("../../../../..")
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Main Menu"
+text = "MAIN_MENU"
 
 [node name="Main Menu Scene Toggle Utility" parent="ColorRect/MarginContainer/VBoxContainer/Main Menu Button" instance=ExtResource("3_te53f")]
 target_level = "res://assets/main_menu/main_menu.tscn"
@@ -67,13 +66,13 @@ custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-text = "Quit Game"
+text = "QUIT"
 script = ExtResource("4_c2t3j")
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_43el4")
-text = "A Game By"
+text = "GAME_BY"
 horizontal_alignment = 1
 uppercase = true
 

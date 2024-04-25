@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://doauam21jbsr8"
+
+[deps]
+
+files=["res://game/localization/Translations - Sheet1.en.translation", "res://game/localization/Translations - Sheet1.ar.translation", "res://game/localization/Translations - Sheet1.de.translation"]
+
+source_file="res://game/localization/Translations - Sheet1.csv"
+dest_files=["res://game/localization/Translations - Sheet1.en.translation", "res://game/localization/Translations - Sheet1.ar.translation", "res://game/localization/Translations - Sheet1.de.translation"]
+
+[params]
+
+compress=true
+delimiter=0

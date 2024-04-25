@@ -1,0 +1,16 @@
+Keys,en,ar,de
+TITLE,Vuno,فونو,Vuno
+START,Start Game,ابدأ اللعبة,Spiel starten
+RESUME,Resume Game,استكمل اللعبة,Spiel fortsetzen
+SETTINGS,Settings,الإعدادات,Einstellungen
+QUIT,Quit Game,خروج من اللعبة,Spiel beenden
+LANGUAGE,Language,اللغة,Sprache
+MUSIC_VOLUME,Music Volume,مستوى الصوت للموسيقى,Musik Lautstärke
+SOUND_EFFECTS_VOLUME,Sound Effects Volume,مستوى تأثيرات الصوت,Soundeffekte Lautstärke
+RESOLUTION,Resolution,دقة الشاشة,Auflösung
+MAIN_MENU,Main Menu,القائمة الرئيسية,Hauptmenü
+YEAR,Year,السنة,Jahr
+GAME_BY,A Game By,لعبة من صنع,Ein Spiel von
+COUNCIL_TITLE,Council Room,غرفة المجلس,Ratssaal
+TECHNOLOGY_TITLE,Technology Tree,شجرة التكنولوجيا,Technologiebaum
+SPELL_TITLE,Spell Book,كتاب السحر,Zauberbuch

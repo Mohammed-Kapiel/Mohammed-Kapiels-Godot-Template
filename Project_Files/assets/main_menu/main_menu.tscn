@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dspfjtfrg8n3e"]
 
 [ext_resource type="PackedScene" uid="uid://mdjx1qkxs8g7" path="res://assets/level_manager/level_toggle_utility.tscn" id="2_3rues"]
-[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/main_menu/button_custom/base_button.tscn" id="2_h28qs"]
+[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/_common_ui/button_custom/base_button.tscn" id="2_h28qs"]
 [ext_resource type="Theme" uid="uid://uhraltuj38dm" path="res://assets/art/main_theme.tres" id="3_0djsj"]
 [ext_resource type="PackedScene" uid="uid://bi7pc6mtfos10" path="res://assets/main_menu/settings_menu/settings_menu.tscn" id="3_5ldoe"]
 [ext_resource type="FontFile" uid="uid://ca5tqknghrsdl" path="res://assets/fonts/8-bit-limit/8bitlim.ttf" id="4_j8mnh"]
 [ext_resource type="PackedScene" uid="uid://cynngi4n55d55" path="res://assets/level_manager/menu_toggle_utility.tscn" id="5_h8821"]
-[ext_resource type="Script" path="res://assets/main_menu/quit_game.gd" id="6_oe28q"]
+[ext_resource type="Script" path="res://assets/_common_util/quit_game.gd" id="6_oe28q"]
 [ext_resource type="Texture2D" uid="uid://ceycmnc4rcqgm" path="res://assets/art/MohammedKapiel_logos_white.png" id="9_cg6je"]
 
 [node name="Main Menu" type="Control"]
@@ -39,7 +39,7 @@ theme = ExtResource("3_0djsj")
 theme_override_colors/font_color = Color(0.607843, 0.678431, 0.717647, 1)
 theme_override_fonts/font = ExtResource("4_j8mnh")
 theme_override_font_sizes/font_size = 72
-text = "Godot Game Template"
+text = "TITLE"
 horizontal_alignment = 1
 uppercase = true
 
@@ -47,7 +47,7 @@ uppercase = true
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Start Game"
+text = "START"
 
 [node name="New Game Scene Toggle Utility" parent="MarginContainer/VBoxContainer/Start Button" instance=ExtResource("2_3rues")]
 target_level = "res://game/levels/test_level.tscn"
@@ -56,7 +56,7 @@ target_level = "res://game/levels/test_level.tscn"
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Settings"
+text = "SETTINGS"
 
 [node name="Settings Menu Toggle Utility" parent="MarginContainer/VBoxContainer/Settings Button" node_paths=PackedStringArray("menu_scene") instance=ExtResource("5_h8821")]
 menu_scene = NodePath("../../../../Settings Menu")
@@ -65,14 +65,14 @@ menu_scene = NodePath("../../../../Settings Menu")
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Quit Game"
+text = "QUIT"
 script = ExtResource("6_oe28q")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_0djsj")
 theme_override_font_sizes/font_size = 0
-text = "A project by"
+text = "GAME_BY"
 horizontal_alignment = 1
 uppercase = true
 

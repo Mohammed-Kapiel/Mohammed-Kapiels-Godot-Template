@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://eq4hnk8va5vf"]
+
+[ext_resource type="Theme" uid="uid://uhraltuj38dm" path="res://assets/art/main_theme.tres" id="1_gwads"]
+[ext_resource type="Script" path="res://assets/_common_ui/base_game_window/game_window.gd" id="2_1jnwx"]
+
+[node name="Base Game Window" type="Window"]
+initial_position = 2
+size = Vector2i(600, 600)
+exclusive = true
+popup_window = true
+theme = ExtResource("1_gwads")
+script = ExtResource("2_1jnwx")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(600, 600)
+render_target_update_mode = 4
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]

@@ -1,32 +1,53 @@
-[gd_scene load_steps=2 format=3 uid="uid://um3tsegywuob"]
+[gd_scene load_steps=4 format=3 uid="uid://um3tsegywuob"]
 
 [ext_resource type="PackedScene" uid="uid://oxhl8m0jpeyx" path="res://assets/pause_menu/pause_menu.tscn" id="1_3bsvk"]
+[ext_resource type="PackedScene" uid="uid://dtjl2pvchapxu" path="res://assets/_common_ui/button_custom/base_button.tscn" id="2_igg8a"]
+[ext_resource type="PackedScene" uid="uid://cynngi4n55d55" path="res://assets/level_manager/menu_toggle_utility.tscn" id="3_gumgu"]
 
 [node name="Test Level" type="Node2D" groups=["Levels"]]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Label" type="Label" parent="Control"]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -228.5
-offset_top = -187.0
-offset_right = 228.5
-offset_bottom = -187.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -31.5
+offset_right = 248.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
 size_flags_vertical = 1
 text = "This is a test level to show you how to use the level toggle utility."
 
-[node name="Pause Menu" parent="Control" instance=ExtResource("1_3bsvk")]
+[node name="Button" parent="CanvasLayer/Control/VBoxContainer" instance=ExtResource("2_igg8a")]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="Menu Toggle Utility" parent="CanvasLayer/Control/VBoxContainer/Button" node_paths=PackedStringArray("menu_scene") instance=ExtResource("3_gumgu")]
+menu_scene = NodePath("../../../Pause Menu")
+
+[node name="Pause Menu" parent="CanvasLayer/Control" instance=ExtResource("1_3bsvk")]
+visible = false
 layout_mode = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/Button" to="CanvasLayer/Control/VBoxContainer/Button/Menu Toggle Utility" method="_on_open_menu_requested"]
